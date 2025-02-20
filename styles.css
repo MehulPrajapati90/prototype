@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  z-index: 5;
+  width: 100%;
+  padding: 20px 20px;
+  display: flex; /* Make navbar a flex container */
+  justify-content: space-between; /* Space out children */
+  align-items: center; /* Vertically center children */
+  transition: all 0.3s ease-out;
+}
+
+.navbar.sticky{
+    background-color: rgb(23, 23, 23);
+    padding: 25px 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none; /* Remove underline from links */
+}
+
+.content-logo h1{
+    color: white;
+}
+
+/* Menu List Styles */
+.menu-list {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Make menu-list a flex container */
+  gap: 40px; /* Add space between menu items */
+  margin: 0;
+  padding: 0;
+}
+
+.menu-list li a {
+  color: white;
+  text-decoration: none; /* Remove underline from links */
+  transition: all 0.5s ease-out;
+}
+
+.menu-list li a:hover{
+    color: rgb(41, 41, 249);
+}
+
+.icon{
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+    display: none;
+}
+
+.cancel-btn{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+}
+
+
+@media (max-width: 868px){
+    .icon{
+        display: block;
+    }
+    .icon.hide{
+        display: none;
+    }
+
+    .navbar .menu-list{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100vh;
+        width: 100%;
+        max-width: 400px;
+        background-color: rgb(32, 32, 32);
+        display: block;
+        padding: 40px 0;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+    .navbar .menu-list.active{
+        left: 0%;
+    }
+
+    .navbar .menu-list li{
+        margin-top: 45px;
+    }
+
+    .navbar .menu-list li a{
+        font-size: 23px;
+    }
+}
+
+
+
+/* section 1 */
+.sec1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #ca3900;
+    /* position: relative; */
+}
+
+.sec1 h1, h3{
+    color: #fff;
+    text-align: center;
+}
+
+.sec1 .sec1-txt{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sec1-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 25vw;
+}
+
+.sec1-container .sub-container{
+    height: 20rem;
+    width: 20rem;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+
+
+
+/* .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+video {
+    object-fit: cover;  
+    width: 100%;
+    height: 100%;
+} */
+
+/* .sec1-txt{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.518);
+    backdrop-filter: blur(5px);
+    
+    z-index: 2;
+} */
+
+/* section 2 */
+.sec2{
+    background-color: black;
+    height: 200vh;
+    width: 100%;
+}
+.sec2 h1{
+    padding: 100px 10px;
+    font-size: 40px;
+    font-weight: 800;
+    text-transform: uppercase;
+    word-spacing: 2px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.sec2 .string div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    /* height: 100vh; */
+}
+
+/* section 3 */
+.sec3{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.sec3 h1{
+    background: transparent;
+    text-align: center;
+    padding: 5rem;
+    font-weight: 800;
+    font-size: 30vw;
+    text-transform: uppercase;
+}
+
+/* section footer */
+.footer{
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(39, 39, 39);
+    color: white;
+}
+
+.footer h1{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.footer h1:hover{
+    color: rgb(47, 47, 255);
+}
+
+.zero{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px; 
+}
+
+.zero p, h3{
+    margin-top: 10px;
+    transition: all 0.2s ease-out;
+}
+
+.zero p:hover{
+    color: rgb(47, 47, 255);
+}
+.zero h3:hover{
+    color: rgb(47, 47, 255);
+}
+
+.lower{
+    position: absolute;
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%, -50%);
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.lower:hover{
+    color: rgb(97, 97, 255);
+}
